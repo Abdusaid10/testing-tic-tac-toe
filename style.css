@@ -1,0 +1,14 @@
+body {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+#gameBoard td {
+    border: 2px solid;
+    height: 125px;
+    width: 125px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    cursor: pointer;
+    color: lightslategray;
+}

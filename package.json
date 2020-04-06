@@ -1,0 +1,47 @@
+{
+  "name": "testing-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch *.js",
+    "build": "webpack",
+    "babel": {
+      "env": {
+        "test": {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      }
+    }
+  },
+  "jest": {
+    "verbose": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdusaid10/testing-tic-tac-toe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdusaid10/testing-tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/Abdusaid10/testing-tic-tac-toe#readme",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "webpack-cli": "^3.3.11"
+  }
+}
