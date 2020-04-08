@@ -9,23 +9,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(css)$/,
-        use: [
-          {
-            loader: 'css-loader',
-            options: {
-              includePaths: ['./node_modules'],
-            },
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
           },
-        ],
+        },
       },
     ],
   },
-  // module: {
-  //   rules: [
-  //     { exclude: /node_modules/ },
-  //     { loader: 'style-loader!css-loader', test: /\.css$/ },
-  //     { use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } } },
-  //   ],
-  // },
 };
