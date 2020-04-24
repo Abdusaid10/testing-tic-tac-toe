@@ -12,9 +12,7 @@ const Board = () => {
   ];
 
   const mark = (pos, symbol) => {
-    // cell: (pos, symbol) => {
     grid[pos] = symbol;
-    // },
   };
 
   const positionsBySymbol = symbol => {

@@ -151,7 +151,6 @@ const Controller = ((UI) => {
         if (game.isGameOver()) {
           const winner = game.getWinner();
           if (winner) {
-            console.log(game.getWinCombo());
             UI.showWinCombo(game.getWinCombo());
             winner.addScore();
             UI.updatePlayerScore(winner);

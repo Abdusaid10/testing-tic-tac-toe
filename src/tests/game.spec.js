@@ -10,6 +10,9 @@ describe('Game', () => {
   const activePlayerSym = game.getActivePlayer().getSymbol();
   const game2 = Game(player1, player2);
 
+  test('should return active player name', () => {
+    expect(game.getActivePlayer().getName()).toBe('player1');
+  });
   test('active player Symbol', () => {
     expect(activePlayerSym).toBe('X');
   });
@@ -57,7 +60,7 @@ describe('Game', () => {
     game2.turn('8');
     expect(game2.isGameOver()).toBe(true);
   });
-  it('it should return winning combo', () => {
+  it('it should return winning combination', () => {
     expect(game2.getWinCombo()).toEqual([2, 4, 6]);
   });
 });
