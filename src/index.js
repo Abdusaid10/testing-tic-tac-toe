@@ -126,10 +126,10 @@ const Controller = ((UI) => {
 
     if (gameSwitch) {
       game.switchPlayer();
-      UI.showMessage(`Play Again! Now ~ ${game.getActivePlayer().getName()} ~ First!!`);
+      UI.showMessage(`Play Again! Now ~ ${game.getActivePlayer().getName().value} ~ First!!`);
       gameSwitch = false;
     } else {
-      UI.showMessage(`Game Started! ~ ${game.getActivePlayer().getName()} ~, You First!`);
+      UI.showMessage(`Game Started! ~ ${game.getActivePlayer().getName().value} ~, You First!`);
       gameSwitch = true;
     }
 
@@ -141,7 +141,7 @@ const Controller = ((UI) => {
       const clickedCellValue = event.target.innerText;
       if (clickedCell === undefined || clickedCellValue !== '') return;
 
-      UI.showMessage(` ~ ${game.getNextPlayer().getName()} ~, you are Next!!!`);
+      UI.showMessage(` ~ ${game.getNextPlayer().getName().value} ~, you are Next!!!`);
 
       const mark = game.turn(clickedCell);
 
@@ -154,7 +154,7 @@ const Controller = ((UI) => {
             UI.showWinCombo(game.getWinCombo());
             winner.addScore();
             UI.updatePlayerScore(winner);
-            UI.showMessage(`Congratulation! ${winner.getName()} won!`);
+            UI.showMessage(`Congratulation! ${winner.getName().value} won!`);
           } else {
             UI.showMessage('The Board is full, please try again!');
           }
