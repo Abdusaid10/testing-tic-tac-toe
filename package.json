@@ -28,7 +28,7 @@
   "homepage": "https://github.com/Abdusaid10/testing-tic-tac-toe#readme",
   "dependencies": {
     "babel-loader": "^8.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "webpack": "^4.42.1"
   },
   "devDependencies": {
